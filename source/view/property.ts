@@ -1,9 +1,9 @@
-import { Section } from "./section";
+import { Container } from "./container";
 
-export class Property extends Section
+export class Property extends Container
 {
   constructor ()
   {
-    super("propery");
+    super("property");
   }
 }
