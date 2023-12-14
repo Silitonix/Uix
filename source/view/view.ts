@@ -23,5 +23,7 @@ export class View
     sectionLeft.hook(root);
     sectionCenter.hook(root);
     sectionRight.hook(root);
+
+    property.connect(new Container("test"));
   }
 }
