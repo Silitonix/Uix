@@ -1,16 +1,24 @@
 export class DOM<K extends keyof HTMLElementTagNameMap>
 {
+  private _id: number = Date.now();
   private element: HTMLElementTagNameMap[ K ];
+  set value(str){
+    if(Object.hasOwn(this.element,"value")) this.element.value = str;
+    this.element.textContent = str;
+  }
+
+  get value(){
+    if(Object.hasOwn(this.element,"value")) return this.element.value;
+    return this.element.textContent;
+  }
+
   get style()
   {
     return this.element.style;
   }
-
-  get id(): string { return this.element.id; };
-  set id(id: string) { this.element.id = id; };
-
-  get className(): string { return this.element.className; };
-  set className(className: string) { this.element.className = className; };
+  get id() { return this._id; }
+  get className(): string { return this.element.className; }
+  set className(className: string) { this.element.className = className; }
 
   insertAdjacentElement(position: InsertPosition, element: HTMLElement)
   {
@@ -33,5 +41,6 @@ export class DOM<K extends keyof HTMLElementTagNameMap>
     if (className) {
       this.className = className;
     }
+    this.element.id = this.id.toString();
   }
 }
