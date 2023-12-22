@@ -10,7 +10,3 @@ this app simplifies the process of designing web pages and web applications. Wit
 
 * **Ease of Use**: With a focus on two main components, working with this software is straightforward and easy to understand.
 * **Automatic Code Generation** : The software automatically generates the necessary code for your pages, eliminating the need for in-depth programming knowledge.
-
-## Installation ?
-
-just [Click Me!](https://uix.silitonix.ir) there is no need to install this app you can directly use it inside you web browser
