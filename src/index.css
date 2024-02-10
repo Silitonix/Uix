@@ -1,0 +1,89 @@
+:root {
+  --padding: 1em;
+  --gap: .5em;
+
+  --surface-lowest: hsl(0, 0%, 3%);
+  --surface-low: hsl(0, 0%, 5%);
+  --surface-normal: hsl(0, 0%, 7%);
+  --surface-high: hsl(0, 0%, 11%);
+  --surface-highest: hsl(0, 0%, 13%);
+  --color: hsl(0, 0%, 70%);
+}
+
+body {
+  background: var(--surface-highest);
+  height: 100vh;
+  margin: 0;
+  overflow: none;
+  display: flex;
+  color: var(--color);
+}
+
+.toolbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.root {
+  flex: 1 1 auto;
+  display: flex;
+  padding: 0 var(--padding);
+}
+
+.bg-lowest {
+  background: var(--surface-lowest);
+}
+
+.bg-low {
+  background: var(--surface-low);
+}
+
+.bg-normal {
+  background: var(--surface-normal);
+}
+
+.bg-high {
+  background: var(--surface-high);
+}
+
+.bg-highest {
+  background: var(--surface-highest);
+}
+
+.fill {
+  flex: 1 1 auto;
+}
+
+.p {
+  padding: var(--padding);
+}
+
+.px {
+  padding: 0 var(--padding);
+}
+
+.py {
+  padding: var(--padding) 0;
+}
+
+.gap {
+  gap: var(--gap);
+}
+
+.round {
+  border-radius: var(--padding);
+}
+
+.row,
+.col {
+  display: flex;
+}
+
+.col {
+  flex-direction: column;
+}
